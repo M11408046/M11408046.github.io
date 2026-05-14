@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【東京食光機】東京美食究極攻略</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        tokyo: {
+                            red: '#FF0032',
+                            gold: '#D4AF37',
+                            dark: '#0F1115',
+                            card: '#1A1D23',
+                            accent: '#3B82F6'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans TC', 'sans-serif'],
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0F1115;
+            color: #E2E8F0;
+            overflow-x: hidden;
+        }
+        .glass-panel {
+            background: rgba(26, 29, 35, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #FFFFFF, #94A3B8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(15, 17, 21, 0) 0%, rgba(15, 17, 21, 1) 100%);
+        }
+        .section-number {
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(45deg, #FF0032, #D4AF37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0F1115;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FF0032;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Hero Section -->
+    <header class="relative h-screen min-h-[600px] flex items-end overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src='https://opal.google/board/blobs/ea2b1aca-cced-4ace-abf3-4f888e85595f' alt='【東京食光機】Banner' class="w-full h-full object-cover transform scale-105 transition-transform duration-1000 hover:scale-100" />
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-6 pb-20 animate-fade-in">
+            <div class="inline-block px-4 py-1 rounded-full border border-tokyo-red/50 bg-tokyo-red/10 text-tokyo-red text-sm font-bold mb-6 tracking-widest uppercase">
+                Gourmet Exploration
+            </div>
+            <h1 class="text-5xl md:text-7xl font-display font-extrabold leading-tight mb-6">
+                <span class="block">【東京食光機】</span>
+                <span class="text-gradient">從江戶路邊攤到米其林星巔</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-400 max-w-2xl font-light">
+                一場味蕾與文明的究極思辨：東京美食究極攻略
+            </p>
+            <div class="mt-8 flex items-center gap-4 text-slate-500 text-sm">
+                <span class="px-3 py-1 bg-white/5 rounded-md border border-white/10 uppercase tracking-tighter">Author: M11408046</span>
+                <span class="w-1 h-1 bg-slate-600 rounded-full"></span>
+                <span>Reading Time: 8 min</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-20">
+        <!-- Intro Quote -->
+        <section class="mb-32 max-w-4xl">
+            <div class="relative">
+                <span class="absolute -top-12 -left-8 text-9xl text-white/5 font-display">"</span>
+                <p class="text-2xl md:text-3xl leading-relaxed text-slate-300 font-light italic">
+                    有人說，要了解一座城市的靈魂，最好的方式不是去博物館，而是去它的市場與餐桌。東京，這座現代與傳統交織的巨型都市，其美食文化就像是一部運作精密的時光機。
+                </p>
+            </div>
+        </section>
+
+        <!-- Bento Grid Layout for Sections -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            
+            <!-- Section 01: Full Width Highlight -->
+            <div class="md:col-span-12 glass-panel rounded-3xl p-8 md:p-12 hover:border-tokyo-red/30 transition-all duration-500">
+                <div class="flex flex-col md:flex-row gap-10 items-start">
+                    <div class="shrink-0">
+                        <span class="section-number text-6xl">01</span>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-display font-bold mb-6 text-white">東京美食：不只是吃飯，更是一場五感派對</h2>
+                        <div class="space-y-4 text-slate-400 leading-relaxed text-lg">
+                            <p>走在東京街頭，你很難定義什麼是真正的「東京味」。它是握壽司時指尖微細的力道，是拉麵店煙霧繚繞中熬煮了十幾小時的湯頭香氣，也是西洋食館裡那一盤被「魔改」得極其精緻的蛋包飯。</p>
+                            <p>這背後支撐的，是所謂的<span class="text-tokyo-gold font-bold">「職人魂」（Shokunin）</span>。在東京，廚師不只是烹飪者，更像是某種修煉者。這種精神讓東京的美食呈現出一種弔詭的平衡：它極度包容，從路邊噴香的文字燒到一客上萬日圓的懷石料理都能共存。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 02: History Card -->
+            <div class="md:col-span-7 glass-panel rounded-3xl p-8 md:p-10 group overflow-hidden relative">
+                <div class="absolute -right-10 -bottom-10 section-number text-[12rem] opacity-5 select-none transition-transform group-hover:scale-110 duration-700">02</div>
+                <span class="section-number text-4xl block mb-6">02</span>
+                <h2 class="text-2xl font-display font-bold mb-6 text-white">進擊的味蕾：美食大聯盟是怎麼練成的？</h2>
+                <div class="text-slate-400 space-y-4 relative z-10">
+                    <p>今日的高級料理在江戶時代（1603-1868）其實是忙碌庶民的「速食」。當時的握壽司、天婦羅與蕎麥麵，是路邊攤上的隨手美味。這種「快速、美味、便利」的基因，至今仍流淌在東京的飲食血液中。</p>
+                    <p>隨著明治維新展開，和服遇上了牛排。日本人發揮了驚人的「轉化力」，將西方的飲食元素拆解再重組，創造出獨樹一格的「洋食」。</p>
+                    <div class="p-4 bg-tokyo-red/5 border-l-2 border-tokyo-red rounded-r-lg mt-6">
+                        <p class="text-sm italic text-tokyo-red/80">2007 年《米其林指南》登陸東京，這座城市一舉摘下全球最多的星星，正式確立了其全球美食霸主的地位。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 03: Modern Trends Card -->
+            <div class="md:col-span-5 bg-gradient-to-br from-tokyo-red/20 to-tokyo-dark glass-panel rounded-3xl p-8 md:p-10 border-tokyo-red/20">
+                <span class="section-number text-4xl block mb-6">03</span>
+                <h2 class="text-2xl font-display font-bold mb-6 text-white">現代食尚：主廚的信任票</h2>
+                <div class="text-slate-400 space-y-4">
+                    <p>目前主流的觀點是<span class="text-white font-bold tracking-wider">「Omakase（無菜單料理）」</span>。這原本是壽司店的專項，現在則擴展到了燒肉、酒吧甚至甜點店。</p>
+                    <p>另一股有趣的趨勢則是「B 級美食的極致化」。現代的東京不流行「什麼都賣」，反而出現了許多「單一品項專門店」。這種「一輩子做好一件事」的偏執，讓平價美食也擁有了米其林等級的深度。</p>
+                </div>
+            </div>
+
+            <!-- Section 04: Social Reflection (Darker tone) -->
+            <div class="md:col-span-12 border-l-4 border-slate-700 bg-white/5 rounded-r-3xl p-8 md:p-12">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/3">
+                        <span class="section-number text-4xl block mb-4">04</span>
+                        <h2 class="text-2xl font-display font-bold text-white mb-4">繁華背後的陰影</h2>
+                        <p class="text-tokyo-gold/80 font-bold">過度旅遊與消失的老店</p>
+                    </div>
+                    <div class="md:w-2/3 text-slate-400 space-y-4 leading-relaxed">
+                        <p>「過度旅遊（Overtourism）」帶來的挑戰正日益嚴峻。在築地或豐洲，出現了價格高得離譜、專門針對觀光客的「入境價格（Inbound Price）」海鮮丼。此外，許多指標性的高級餐廳紛紛走向「介紹制」或「預約難」，美食是否逐漸成為一種排外的社會資本？</p>
+                        <p>更令人感傷的是「職人高齡化」。每一家老店的熄燈，都代表著一種味道、一段歷史的永久封存。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 05: Future Forecast -->
+            <div class="md:col-span-12 glass-panel rounded-3xl p-8 md:p-12 relative overflow-hidden group">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-tokyo-accent/10 blur-[100px] -z-10 group-hover:bg-tokyo-accent/20 transition-colors duration-700"></div>
+                <div class="relative z-10">
+                    <span class="section-number text-4xl block mb-6">05</span>
+                    <h2 class="text-3xl font-display font-bold mb-8 text-white">未來的東京味：機器人、永續與植物肉</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="p-6 bg-white/5 rounded-2xl border border-white/5">
+                            <h3 class="text-tokyo-accent font-bold mb-3">AI & Automation</h3>
+                            <p class="text-sm text-slate-400">機器人主廚與 AI 點餐系統正悄悄進入自動化程度極高的東京食肆。</p>
+                        </div>
+                        <div class="p-6 bg-white/5 rounded-2xl border border-white/5">
+                            <h3 class="text-tokyo-accent font-bold mb-3">Sustainability</h3>
+                            <p class="text-sm text-slate-400">「永續海鮮」與減少剩食開始改變餐廳招牌，反映環保意識的抬頭。</p>
+                        </div>
+                        <div class="p-6 bg-white/5 rounded-2xl border border-white/5">
+                            <h3 class="text-tokyo-accent font-bold mb-3">Vegan Revolution</h3>
+                            <p class="text-sm text-slate-400">植物肉與素食拉麵正以意想不到的美味流行，展現高度包容性。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Conclusion -->
+        <section class="mt-32 text-center max-w-3xl mx-auto py-20 border-t border-white/10">
+            <h2 class="text-3xl font-display font-bold text-white mb-8">結語</h2>
+            <p class="text-xl text-slate-300 leading-relaxed font-light">
+                東京的美食，從來不只是一頓飯。它是一場文化長跑，是歷史的積累，也是對未來生活的無限想像。下次你來到東京，在那口美味入口的瞬間，或許也能感受到這台「食光機」在你舌尖上旋轉的奇妙動力。
+            </p>
+            <div class="mt-12">
+                <a href="#" class="inline-flex items-center gap-2 px-8 py-4 bg-tokyo-red text-white font-bold rounded-full hover:bg-tokyo-red/80 transition-all transform hover:-translate-y-1 shadow-lg shadow-tokyo-red/20">
+                    探索更多東京食光
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Simple Intersection Observer for scroll reveal effects
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass-panel, section').forEach(el => {
+            el.style.opacity = '0';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
